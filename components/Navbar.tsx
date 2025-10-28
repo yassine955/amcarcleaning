@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
       <Link href="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 className="m-0 text-primary"><i className="fa fa-car me-3"></i>AM Carcleaning</h2>
+        <Image src="/img/logo.jpg" alt="AM Carcleaning" width={200} height={80} style={{objectFit: 'contain'}} priority />
       </Link>
       <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span className="navbar-toggler-icon"></span>

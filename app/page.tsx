@@ -1,4 +1,16 @@
 import PageLayout from '@/components/PageLayout'
+import FAQ from '@/components/FAQ'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AM Carcleaning Woerden | Professioneel Autopoetsbedrijf',
+  description: 'Autopoetsbedrijf AM Carcleaning in Woerden. Specialist in auto polijsten, interieur reiniging, lak correctie en swirls verwijderen. Ruime ervaring sinds 2016. Bel 06 246 804 51.',
+  openGraph: {
+    title: 'AM Carcleaning Woerden | Professioneel Autopoetsbedrijf',
+    description: 'Autopoetsbedrijf AM Carcleaning in Woerden. Auto polijsten, interieur reiniging, lak correctie.',
+    url: 'https://amcarcleaning.nl',
+  },
+}
 
 export default function Home() {
   return (
@@ -169,6 +181,10 @@ export default function Home() {
         </div>
       </div>
       {/* Contact CTA End */}
+
+      {/* FAQ Section */}
+      <FAQ />
+      {/* FAQ End */}
     </PageLayout>
   )
 }

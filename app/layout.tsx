@@ -1,12 +1,53 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import StructuredData from '@/components/StructuredData'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Autopoetsbedrijf AM Carcleaning - Woerden',
-  description: 'Professioneel autopoetsbedrijf in Woerden. Specialist in interieur reiniging en exterieur polijsten.',
+  title: 'AM Carcleaning Woerden | Autopoetsbedrijf | Auto Polijsten & Interieur Reiniging',
+  description: 'Professioneel autopoetsbedrijf in Woerden. Specialist in auto polijsten, interieur reiniging, lak correctie en swirls verwijderen. Bel 06 246 804 51 voor een afspraak.',
+  keywords: 'autopoetsbedrijf Woerden, auto polijsten Woerden, interieur reiniging auto, carcleaning Woerden, lak correctie, swirls verwijderen, auto detailing Woerden',
+  authors: [{ name: 'AM Carcleaning' }],
+  creator: 'AM Carcleaning',
+  publisher: 'AM Carcleaning',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/img/favicon.ico',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'nl_NL',
+    url: 'https://amcarcleaning.nl',
+    siteName: 'AM Carcleaning',
+    title: 'AM Carcleaning Woerden | Autopoetsbedrijf | Auto Polijsten & Interieur Reiniging',
+    description: 'Professioneel autopoetsbedrijf in Woerden. Specialist in auto polijsten, interieur reiniging, lak correctie en swirls verwijderen.',
+    images: [
+      {
+        url: '/img/logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AM Carcleaning Woerden',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AM Carcleaning Woerden | Autopoetsbedrijf',
+    description: 'Professioneel autopoetsbedrijf in Woerden. Auto polijsten, interieur reiniging en lak correctie.',
+    images: ['/img/logo.jpg'],
+  },
+  verification: {
+    google: 'google-site-verification-code-here',
   },
 }
 
@@ -35,6 +76,8 @@ export default function RootLayout({
 
         {/* Custom Styles - Load Last to Override */}
         <link href="/css/style.css?v=3" rel="stylesheet" />
+
+        <StructuredData />
       </head>
       <body>
         {children}

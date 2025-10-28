@@ -1,5 +1,17 @@
 import PageLayout from '@/components/PageLayout'
 import PageHeader from '@/components/PageHeader'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Auto Polijsten Woerden | Lak Correctie | Swirls Verwijderen | AM Carcleaning',
+  description: 'Professioneel auto polijsten in Woerden. Lak correctie, swirls verwijderen, waskrassen verwijderen en beschermende coating. Specialist in lak polijsten. Bel 06 246 804 51 voor een afspraak.',
+  keywords: 'auto polijsten Woerden, lak correctie Woerden, swirls verwijderen, waskrassen verwijderen, auto detailing Woerden, lak polijsten',
+  openGraph: {
+    title: 'Auto Polijsten Woerden | Lak Correctie | AM Carcleaning',
+    description: 'Professioneel auto polijsten in Woerden. Lak correctie en swirls verwijderen.',
+    url: 'https://amcarcleaning.nl/exterieur',
+  },
+}
 
 export default function ExterieurPage() {
   return (

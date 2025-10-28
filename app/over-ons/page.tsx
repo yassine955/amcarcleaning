@@ -1,5 +1,17 @@
 import PageLayout from '@/components/PageLayout'
 import PageHeader from '@/components/PageHeader'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Over AM Carcleaning Woerden | Professioneel Autopoetsbedrijf Sinds 2016',
+  description: 'Over AM Carcleaning in Woerden. Jarenlange ervaring met auto polijsten en interieur reiniging. Persoonlijke service en professionele producten. Barwoutswaarder 5, Woerden.',
+  keywords: 'over autopoetsbedrijf Woerden, AM Carcleaning, professional car detailing Woerden',
+  openGraph: {
+    title: 'Over AM Carcleaning Woerden | Professioneel Autopoetsbedrijf',
+    description: 'Over AM Carcleaning in Woerden. Jarenlange ervaring met autopoesbeurten.',
+    url: 'https://amcarcleaning.nl/over-ons',
+  },
+}
 
 export default function OverOnsPage() {
   return (
@@ -14,7 +26,7 @@ export default function OverOnsPage() {
               <div className="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
                 <img
                   className="position-absolute img-fluid w-100 h-100"
-                  src="/img/about.jpg"
+                  src="/img/bedrijf.jpg"
                   style={{objectFit: 'cover'}}
                   alt="Over AM Carcleaning"
                 />

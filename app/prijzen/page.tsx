@@ -1,5 +1,17 @@
 import PageLayout from '@/components/PageLayout'
 import PageHeader from '@/components/PageHeader'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Prijzen Autopoetsbedrijf Woerden | Tarieven Auto Polijsten | AM Carcleaning',
+  description: 'Transparante prijzen voor autopoesbeurten in Woerden. Tarieven voor interieur reiniging, polijstbeurten en lak correctie. Bel voor een offerte op maat: 06 246 804 51.',
+  keywords: 'prijzen autopoetsbedrijf Woerden, tarieven auto polijsten, kosten interieur reiniging, prijzen lak correctie',
+  openGraph: {
+    title: 'Prijzen Autopoetsbedrijf Woerden | AM Carcleaning',
+    description: 'Transparante prijzen voor autopoesbeurten in Woerden.',
+    url: 'https://amcarcleaning.nl/prijzen',
+  },
+}
 
 export default function PrijzenPage() {
   return (

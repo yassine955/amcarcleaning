@@ -1,0 +1,19 @@
+# robots.txt voor AM Carcleaning
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://amcarcleaning.nl/sitemap.xml
+
+# Crawl-delay voor bots
+User-agent: *
+Crawl-delay: 0
+
+# Specifieke user agents
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

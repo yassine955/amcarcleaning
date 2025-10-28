@@ -4,6 +4,9 @@ import PageLayout from '@/components/PageLayout'
 import PageHeader from '@/components/PageHeader'
 import { useState } from 'react'
 
+// Note: metadata export doesn't work in client components,
+// will be handled by parent layout
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

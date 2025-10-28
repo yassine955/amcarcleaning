@@ -1,5 +1,17 @@
 import PageLayout from '@/components/PageLayout'
 import PageHeader from '@/components/PageHeader'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Interieur Reiniging Auto Woerden | Bekleding Reinigen | AM Carcleaning',
+  description: 'Professionele auto interieur reiniging in Woerden. Bekleding reinigen, dashboard behandeling, leder conditioneren en geur verwijdering. Specialist in vlekken verwijderen. Bel 06 246 804 51.',
+  keywords: 'interieur reiniging auto Woerden, bekleding reinigen Woerden, auto stofferen Woerden, dashboard reiniging, geur verwijdering auto',
+  openGraph: {
+    title: 'Interieur Reiniging Auto Woerden | AM Carcleaning',
+    description: 'Professionele auto interieur reiniging in Woerden. Bekleding reinigen, dashboard behandeling en meer.',
+    url: 'https://amcarcleaning.nl/interieur',
+  },
+}
 
 export default function InterieurPage() {
   return (
