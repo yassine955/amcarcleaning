@@ -1,0 +1,22 @@
+{
+  "name": "car-cleaning-nextjs",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "kill-port 3000 && next dev",
+    "build": "next build",
+    "start": "kill-port 3000 && next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  }
+}
