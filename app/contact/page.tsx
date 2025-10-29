@@ -15,11 +15,54 @@ export default function ContactPage() {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null
+    message: string
+  }>({ type: null, message: '' })
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Form submission logic would go here
-    console.log('Form submitted:', formData)
-    alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.')
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: '' })
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Bedankt voor uw bericht! We hebben een bevestiging naar uw email gestuurd en nemen zo snel mogelijk contact met u op.'
+        })
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Er is een fout opgetreden. Probeer het later opnieuw.'
+        })
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Kan geen verbinding maken met de server. Controleer uw internetverbinding of bel ons direct op 06 246 804 51.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -87,6 +130,19 @@ export default function ContactPage() {
                 direct bellen of mailen.
               </p>
               <form onSubmit={handleSubmit}>
+                {/* Success/Error Message */}
+                {submitStatus.type && (
+                  <div className={`alert ${submitStatus.type === 'success' ? 'alert-success' : 'alert-danger'} mb-4`} role="alert">
+                    <div className="d-flex align-items-start">
+                      <i className={`fa ${submitStatus.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-3 mt-1`} style={{fontSize: '20px'}}></i>
+                      <div>
+                        <strong>{submitStatus.type === 'success' ? 'Gelukt!' : 'Fout'}</strong>
+                        <p className="mb-0 mt-1">{submitStatus.message}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">
@@ -149,8 +205,22 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="col-12">
-                    <button className="btn btn-primary w-100 py-3" type="submit">
-                      Verzenden
+                    <button
+                      className="btn btn-primary w-100 py-3"
+                      type="submit"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                          Bezig met verzenden...
+                        </>
+                      ) : (
+                        <>
+                          <i className="fa fa-paper-plane me-2"></i>
+                          Verzenden
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>
