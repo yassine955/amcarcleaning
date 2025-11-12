@@ -1,3 +1,5 @@
+'use client'
+
 export default function FAQ() {
   const faqs = [
     {
@@ -18,7 +20,7 @@ export default function FAQ() {
     },
     {
       question: "Moet ik een afspraak maken?",
-      answer: "Ja, wij werken uitsluitend op afspraak om u de beste service te kunnen bieden. Bel 06 246 804 51 of neem contact op via onze contactpagina."
+      answer: "Ja, wij werken uitsluitend op afspraak om u de beste service te kunnen bieden. Bel +31 6 246 804 51 of neem contact op via onze contactpagina."
     },
     {
       question: "Welke services bieden jullie aan?",
@@ -40,30 +42,96 @@ export default function FAQ() {
   }
 
   return (
-    <div className="container-xxl py-5">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="text-primary text-uppercase">// Veelgestelde Vragen //</h6>
-          <h1 className="mb-5">Veelgestelde Vragen over Autopoetsen in Woerden</h1>
-        </div>
-        <div className="row g-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="col-lg-6 wow fadeInUp" data-wow-delay={`${0.1 + index * 0.1}s`}>
-              <div className="bg-light p-4 h-100">
-                <h5 className="text-primary mb-3">
-                  <i className="fa fa-question-circle me-2"></i>
-                  {faq.question}
-                </h5>
-                <p className="mb-0">{faq.answer}</p>
+    <>
+      <style jsx>{`
+        /* Rogo DNA: FAQ Component Styles */
+        .rogo-faq-container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .rogo-faq-title {
+          font-size: clamp(2rem, 4vw, 3rem);
+          line-height: 1.2;
+          color: #ffffff;
+          margin-bottom: 16px;
+          font-weight: 600;
+          font-family: 'Barlow', serif;
+          text-align: center;
+        }
+        .rogo-faq-subtitle {
+          font-size: 1rem;
+          color: #b0b0b0;
+          text-align: center;
+          margin-bottom: 64px;
+        }
+        .rogo-faq-card {
+          background: #1f1f1f;
+          border-radius: 2px;
+          padding: 32px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          height: 100%;
+          transition: all 200ms ease;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .rogo-faq-card:hover {
+          background: #252525;
+          border-color: rgba(188, 150, 0, 0.3);
+          transform: translateY(-2px);
+        }
+        .rogo-faq-question {
+          font-size: 1.125rem;
+          color: #ffffff;
+          margin-bottom: 16px;
+          font-weight: 600;
+          line-height: 1.4;
+          display: flex;
+          align-items: flex-start;
+        }
+        .rogo-faq-answer {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #b0b0b0;
+          margin: 0;
+        }
+        .rogo-faq-icon {
+          margin-right: 12px;
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+        }
+      `}</style>
+
+      <div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <div className="rogo-faq-container">
+          <h2 className="rogo-faq-title">
+            Veelgestelde Vragen
+          </h2>
+          <p className="rogo-faq-subtitle">
+            Alles wat u moet weten over onze autopoetsdiensten
+          </p>
+          <div className="row g-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="col-lg-6">
+                <div className="rogo-faq-card">
+                  <h3 className="rogo-faq-question">
+                    <svg className="rogo-faq-icon" viewBox="0 0 24 24" fill="none" stroke="#bc9600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                      <line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                    <span>{faq.question}</span>
+                  </h3>
+                  <p className="rogo-faq-answer">{faq.answer}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

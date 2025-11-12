@@ -1,0 +1,451 @@
+{
+  "name": "Rogo AI Design System",
+  "version": "1.0.0",
+  "description": "Complete design system theme for Rogo AI platform",
+
+  "colors": {
+    "primary": {
+      "white": "#ffffff",
+      "dark": "#151515",
+      "navy": "#151515",
+      "beige": "#f5f2eb"
+    },
+    "secondary": {
+      "gray": {
+        "50": "#f5f5f5",
+        "300": "#aaaaaa",
+        "500": "#737373",
+        "900": "#151515"
+      }
+    },
+    "accent": {
+      "green": {
+        "dark": "#135b45",
+        "medium": "#19a26c"
+      },
+      "blue": {
+        "primary": "#0071c1"
+      },
+      "red": {
+        "primary": "#d94636"
+      }
+    },
+    "transparent": {
+      "white10": "rgba(255, 255, 255, 0.1)",
+      "white15": "rgba(255, 255, 255, 0.15)",
+      "white26": "rgba(255, 255, 255, 0.26)",
+      "dark20": "rgba(0, 0, 0, 0.2)",
+      "dark50": "rgba(0, 0, 0, 0.5)"
+    },
+    "background": {
+      "primary": "#ffffff",
+      "secondary": "#f5f2eb",
+      "dark": "#151515",
+      "overlay": "rgba(21, 21, 21, 0.8)"
+    },
+    "text": {
+      "primary": "#151515",
+      "secondary": "#737373",
+      "light": "#ffffff",
+      "link": "#0071c1"
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "primary": {
+        "name": "Inter",
+        "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "weights": [400, 500, 700]
+      },
+      "display": {
+        "name": "BR Sonoma",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weights": [400, 500],
+        "variants": ["Regular", "Medium", "Italic"]
+      },
+      "serif": {
+        "name": "Martina Plantijn",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weights": [400]
+      },
+      "mono": {
+        "name": "Fragment Mono, Rooftop Mono",
+        "fallback": "'Courier New', monospace",
+        "weights": [400]
+      }
+    },
+    "fontSizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "3.75rem",
+      "7xl": "4.5rem",
+      "8xl": "6rem",
+      "9xl": "8rem"
+    },
+    "fontWeights": {
+      "normal": 400,
+      "medium": 500,
+      "bold": 700
+    },
+    "lineHeights": {
+      "none": 1,
+      "tight": 1.2,
+      "snug": 1.3,
+      "normal": 1.5,
+      "relaxed": 1.625,
+      "loose": 2
+    },
+    "letterSpacing": {
+      "tighter": "-0.05em",
+      "tight": "-0.025em",
+      "normal": "0",
+      "wide": "0.025em",
+      "wider": "0.05em",
+      "widest": "0.1em"
+    }
+  },
+
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px",
+    "20": "80px",
+    "24": "96px",
+    "28": "112px",
+    "32": "128px",
+    "36": "144px",
+    "40": "160px"
+  },
+
+  "breakpoints": {
+    "mobile": {
+      "max": "809.98px",
+      "container": "390px"
+    },
+    "tablet": {
+      "min": "810px",
+      "max": "1199.98px",
+      "container": "768px"
+    },
+    "desktop": {
+      "min": "1200px",
+      "max": "1599.98px",
+      "container": "1200px"
+    },
+    "wide": {
+      "min": "1600px",
+      "container": "1280px"
+    }
+  },
+
+  "layout": {
+    "containers": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1200px",
+      "2xl": "1280px"
+    },
+    "padding": {
+      "mobile": {
+        "horizontal": "12px",
+        "vertical": "48px"
+      },
+      "tablet": {
+        "horizontal": "24px",
+        "vertical": "64px"
+      },
+      "desktop": {
+        "horizontal": "40px",
+        "vertical": "120px"
+      }
+    },
+    "gaps": {
+      "xs": "8px",
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "40px"
+    }
+  },
+
+  "components": {
+    "button": {
+      "base": {
+        "padding": "8px 12px",
+        "height": "36px",
+        "borderRadius": "1px",
+        "fontWeight": 500,
+        "cursor": "pointer",
+        "transition": "all 0.2s ease"
+      },
+      "variants": {
+        "primary": {
+          "background": "#151515",
+          "color": "#ffffff",
+          "hover": {
+            "background": "#19a26c"
+          }
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#151515",
+          "border": "1px solid #151515",
+          "hover": {
+            "background": "#151515",
+            "color": "#ffffff"
+          }
+        },
+        "link": {
+          "background": "transparent",
+          "color": "#0071c1",
+          "textDecoration": "underline",
+          "hover": {
+            "opacity": 0.8
+          }
+        }
+      },
+      "sizes": {
+        "sm": {
+          "padding": "6px 10px",
+          "height": "32px",
+          "fontSize": "0.875rem"
+        },
+        "md": {
+          "padding": "8px 12px",
+          "height": "36px",
+          "fontSize": "1rem"
+        },
+        "lg": {
+          "padding": "12px 16px",
+          "height": "40px",
+          "fontSize": "1.125rem"
+        }
+      }
+    },
+    "card": {
+      "base": {
+        "background": "#f5f5f5",
+        "borderRadius": "1px",
+        "padding": "24px",
+        "boxShadow": "0 0 0 4px rgba(255, 255, 255, 0.26)"
+      },
+      "variants": {
+        "elevated": {
+          "boxShadow": "0 4px 20px rgba(0, 0, 0, 0.1)"
+        },
+        "bordered": {
+          "border": "1px solid #aaaaaa",
+          "boxShadow": "none"
+        }
+      }
+    },
+    "navigation": {
+      "height": "80px",
+      "logo": {
+        "width": "60px",
+        "height": "24px"
+      },
+      "padding": {
+        "desktop": "40px",
+        "mobile": "16px"
+      },
+      "gap": "24px"
+    },
+    "hero": {
+      "height": "100vh",
+      "minHeight": "600px",
+      "padding": {
+        "top": "120px",
+        "bottom": "80px"
+      },
+      "overlay": {
+        "background": "rgba(0, 0, 0, 0.5)",
+        "backdropFilter": "blur(5px)"
+      }
+    },
+    "section": {
+      "padding": {
+        "mobile": {
+          "vertical": "48px",
+          "horizontal": "16px"
+        },
+        "desktop": {
+          "vertical": "120px",
+          "horizontal": "40px"
+        }
+      },
+      "maxWidth": "1200px"
+    }
+  },
+
+  "effects": {
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "base": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      "subtle": "0 0 0 4px rgba(255, 255, 255, 0.26)"
+    },
+    "blur": {
+      "sm": "4px",
+      "base": "5px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px"
+    },
+    "transitions": {
+      "fast": "150ms ease",
+      "base": "200ms ease",
+      "slow": "300ms ease",
+      "slower": "500ms ease"
+    }
+  },
+
+  "animations": {
+    "fadeIn": {
+      "keyframes": {
+        "from": { "opacity": 0 },
+        "to": { "opacity": 1 }
+      },
+      "duration": "300ms",
+      "timingFunction": "ease-in"
+    },
+    "slideUp": {
+      "keyframes": {
+        "from": {
+          "transform": "translateY(20px)",
+          "opacity": 0
+        },
+        "to": {
+          "transform": "translateY(0)",
+          "opacity": 1
+        }
+      },
+      "duration": "400ms",
+      "timingFunction": "ease-out"
+    },
+    "scaleIn": {
+      "keyframes": {
+        "from": {
+          "transform": "scale(0.95)",
+          "opacity": 0
+        },
+        "to": {
+          "transform": "scale(1)",
+          "opacity": 1
+        }
+      },
+      "duration": "200ms",
+      "timingFunction": "ease-out"
+    }
+  },
+
+  "zIndex": {
+    "base": 1,
+    "dropdown": 10,
+    "sticky": 20,
+    "fixed": 30,
+    "modalBackdrop": 40,
+    "modal": 50,
+    "popover": 60,
+    "tooltip": 70
+  },
+
+  "borderRadius": {
+    "none": "0px",
+    "sm": "1px",
+    "base": "2px",
+    "md": "4px",
+    "lg": "8px",
+    "xl": "12px",
+    "2xl": "16px",
+    "3xl": "24px",
+    "full": "9999px"
+  },
+
+  "aspectRatios": {
+    "square": "1 / 1",
+    "video": "16 / 9",
+    "portrait": "3 / 4",
+    "landscape": "4 / 3",
+    "ultrawide": "21 / 9"
+  },
+
+  "cssVariables": {
+    "tokens": {
+      "--color-white": "#ffffff",
+      "--color-dark": "#151515",
+      "--color-gray": "#737373",
+      "--color-beige": "#f5f2eb",
+      "--color-green": "#19a26c",
+      "--color-blue": "#0071c1",
+      "--font-primary": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+      "--font-display": "BR Sonoma, Georgia, serif",
+      "--font-serif": "Martina Plantijn, Georgia, serif",
+      "--spacing-unit": "8px",
+      "--container-max-width": "1200px",
+      "--transition-speed": "200ms",
+      "--border-radius": "1px",
+      "--shadow-subtle": "0 0 0 4px rgba(255, 255, 255, 0.26)"
+    },
+    "dynamic": {
+      "--framer-will-change-override": "transform",
+      "--stack-gap-x": "24px",
+      "--stack-gap-y": "24px"
+    }
+  },
+
+  "accessibility": {
+    "focusRing": {
+      "width": "2px",
+      "style": "solid",
+      "color": "#0071c1",
+      "offset": "2px"
+    },
+    "contrastRatios": {
+      "minimum": "4.5:1",
+      "enhanced": "7:1"
+    }
+  },
+
+  "implementation": {
+    "notes": [
+      "Font files need to be loaded via @font-face declarations",
+      "Use CSS custom properties for dynamic theming",
+      "Implement responsive breakpoints using mobile-first approach",
+      "Ensure backdrop-filter has fallbacks for older browsers",
+      "Use aspect-ratio with object-fit for images",
+      "Add will-change for animated elements sparingly",
+      "Maintain semantic HTML structure for accessibility"
+    ],
+    "dependencies": {
+      "fonts": [
+        "Inter (400, 500, 700)",
+        "BR Sonoma (Regular, Medium, Italic)",
+        "Martina Plantijn Regular",
+        "Fragment Mono",
+        "Rooftop Mono"
+      ]
+    }
+  }
+}

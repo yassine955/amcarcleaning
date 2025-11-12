@@ -3,12 +3,18 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Spinner from './Spinner'
 
-export default function PageLayout({ children }: { children: React.ReactNode }) {
+interface PageLayoutProps {
+  children: React.ReactNode
+  isHomepage?: boolean
+  hideTopbar?: boolean
+}
+
+export default function PageLayout({ children, isHomepage = false, hideTopbar = false }: PageLayoutProps) {
   return (
     <>
       <Spinner />
-      <Topbar />
-      <Navbar />
+      {!hideTopbar && <Topbar transparent={isHomepage} />}
+      <Navbar transparent={isHomepage} centered={hideTopbar} />
       {children}
       <Footer />
     </>

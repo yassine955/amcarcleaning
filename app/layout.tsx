@@ -5,7 +5,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'AM Carcleaning Woerden | Autopoetsbedrijf | Auto Polijsten & Interieur Reiniging',
-  description: 'Professioneel autopoetsbedrijf in Woerden. Specialist in auto polijsten, interieur reiniging, lak correctie en swirls verwijderen. Bel 06 246 804 51 voor een afspraak.',
+  description: 'Professioneel autopoetsbedrijf in Woerden. Specialist in auto polijsten, interieur reiniging, lak correctie en swirls verwijderen. Bel +31 6 246 804 51 voor een afspraak.',
   keywords: 'autopoetsbedrijf Woerden, auto polijsten Woerden, interieur reiniging auto, carcleaning Woerden, lak correctie, swirls verwijderen, auto detailing Woerden',
   authors: [{ name: 'AM Carcleaning' }],
   creator: 'AM Carcleaning',
@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/img/favicon.ico',
+    icon: '/img/favicon-white.svg',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
@@ -57,12 +58,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl">
+    <html lang="nl" style={{ overflowX: 'hidden', width: '100%' }}>
       <head>
         {/* Google Web Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
         {/* Icon Font Stylesheet */}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
@@ -79,7 +80,7 @@ export default function RootLayout({
 
         <StructuredData />
       </head>
-      <body>
+      <body style={{ backgroundColor: 'rgb(26, 26, 26)', margin: 0, overflowX: 'hidden', width: '100%' }}>
         {children}
 
         {/* JavaScript Libraries */}

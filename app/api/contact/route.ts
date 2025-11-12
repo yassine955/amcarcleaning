@@ -165,7 +165,7 @@ function getAdminEmailTemplate(data: { name: string; email: string; subject: str
               </p>
               <p style="margin: 0; color: #666; font-size: 13px; line-height: 1.6;">
                 Barwoutswaarder 5, 3449 HE Woerden<br>
-                Tel: <a href="tel:0624680451" style="color: #1e40af; text-decoration: none;">06 246 804 51</a><br>
+                Tel: <a href="tel:+31624680451" style="color: #1e40af; text-decoration: none;">+31 6 246 804 51</a><br>
                 Email: <a href="mailto:carcleaning75@gmail.com" style="color: #1e40af; text-decoration: none;">carcleaning75@gmail.com</a>
               </p>
               <p style="margin: 15px 0 0 0; color: #999; font-size: 12px;">
@@ -183,7 +183,7 @@ function getAdminEmailTemplate(data: { name: string; email: string; subject: str
 }
 
 // Customer confirmation email template
-function getCustomerEmailTemplate(name: string): string {
+function getCustomerEmailTemplate(name: string, logoUrl: string): string {
   return `
 <!DOCTYPE html>
 <html lang="nl">
@@ -230,7 +230,7 @@ function getCustomerEmailTemplate(name: string): string {
                     <ul style="margin: 0; padding: 0 0 0 20px; color: #111; font-size: 15px; line-height: 1.8;">
                       <li style="margin-bottom: 8px;">We reageren meestal binnen <strong>24 uur</strong> op werkdagen</li>
                       <li style="margin-bottom: 8px;">U ontvangt een persoonlijk antwoord op uw vraag</li>
-                      <li>Heeft u spoed? Bel ons gerust direct op <strong>06 246 804 51</strong></li>
+                      <li>Heeft u spoed? Bel ons gerust direct op <strong>+31 6 246 804 51</strong></li>
                     </ul>
                   </td>
                 </tr>
@@ -245,7 +245,7 @@ function getCustomerEmailTemplate(name: string): string {
                   <tr>
                     <td style="color: #666; font-size: 14px; text-align: center;">
                       <strong style="color: #111;">Telefoon:</strong><br>
-                      <a href="tel:0624680451" style="color: #1e40af; text-decoration: none; font-size: 16px; font-weight: 600;">06 246 804 51</a>
+                      <a href="tel:+31624680451" style="color: #1e40af; text-decoration: none; font-size: 16px; font-weight: 600;">+31 6 246 804 51</a>
                     </td>
                   </tr>
                   <tr>
@@ -295,7 +295,7 @@ function getCustomerEmailTemplate(name: string): string {
           <tr>
             <td style="background-color: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
               <p style="margin: 0 0 15px 0;">
-                <img src="cid:logo" alt="AM Carcleaning" style="max-width: 150px; height: auto;" />
+                <img src="${logoUrl}" alt="AM Carcleaning" style="max-width: 150px; height: auto;" />
               </p>
               <p style="margin: 0 0 10px 0; color: #111; font-size: 18px; font-weight: 700;">
                 AM Carcleaning Woerden
@@ -333,7 +333,7 @@ export async function POST(request: NextRequest) {
     // Check rate limit
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { error: 'U heeft recent al een bericht verzonden. U kunt slechts 1 bericht per 5 minuten versturen om spam te voorkomen. Probeer het over enkele minuten opnieuw of bel ons direct op 06 246 804 51.' },
+        { error: 'U heeft recent al een bericht verzonden. U kunt slechts 1 bericht per 5 minuten versturen om spam te voorkomen. Probeer het over enkele minuten opnieuw of bel ons direct op +31 6 246 804 51.' },
         { status: 429 }
       )
     }
@@ -378,19 +378,17 @@ export async function POST(request: NextRequest) {
       replyTo: sanitizedData.email
     })
 
+    // Get logo URL (works on both development and production)
+    const protocol = request.headers.get('x-forwarded-proto') || 'https'
+    const host = request.headers.get('host') || 'amcarcleaning.nl'
+    const logoUrl = `${protocol}://${host}/img/logo.jpg`
+
     // Send customer confirmation
     await transporter.sendMail({
       from: `"AM Carcleaning" <${process.env.EMAIL_FROM}>`,
       to: sanitizedData.email,
       subject: 'Bevestiging: Uw bericht is ontvangen - AM Carcleaning',
-      html: getCustomerEmailTemplate(sanitizedData.name),
-      attachments: [
-        {
-          filename: 'logo.jpg',
-          path: process.cwd() + '/public/img/logo.jpg',
-          cid: 'logo'
-        }
-      ]
+      html: getCustomerEmailTemplate(sanitizedData.name, logoUrl)
     })
 
     return NextResponse.json(

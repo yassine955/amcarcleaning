@@ -11,22 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/interieur`,
+      url: `${baseUrl}/diensten`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/exterieur`,
+      url: `${baseUrl}/diensten/interieur`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
-      url: `${baseUrl}/prijzen`,
+      url: `${baseUrl}/diensten/exterieur`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'monthly',
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/over-ons`,

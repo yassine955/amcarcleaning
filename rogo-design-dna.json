@@ -1,0 +1,450 @@
+{
+  "designSystemProfile": {
+    "name": "AM Carcleaning Design DNA",
+    "version": "4.0.0",
+    "description": "Complete design system profile with Blue primary (#1e40af) and Gold/Blue accents (#bc9600, #1e40af)",
+    "styleCategory": "Modern SaaS/Enterprise Platform",
+    "designPhilosophy": "Minimal, sophisticated, data-driven with premium positioning",
+    "primaryColor": "#1e40af",
+    "accentColors": {
+      "primary": "#bc9600",
+      "secondary": "#1e40af"
+    }
+  },
+
+  "visualIdentity": {
+    "brandPersonality": [
+      "Professional",
+      "Sophisticated",
+      "Data-driven",
+      "Trustworthy",
+      "Modern",
+      "Premium"
+    ],
+    "aestheticDirection": "Clean minimalism with editorial design influences",
+    "visualTone": "Serious yet approachable, emphasizing credibility over playfulness"
+  },
+
+  "layoutPatterns": {
+    "gridSystem": {
+      "type": "12-column with custom breakpoints",
+      "approach": "Content-first, asymmetric layouts",
+      "maxWidth": "1200px centered with generous margins",
+      "gutterPhilosophy": "Extra wide gutters (40px+) for breathing room"
+    },
+
+    "sectionStructure": {
+      "pattern": "Alternating content-media blocks",
+      "rhythm": "Large vertical spacing between sections (120px+ desktop, 80px mobile)",
+      "composition": [
+        "Full-bleed hero with overlay text",
+        "Alternating left/right content-image pairs",
+        "Centered testimonial blocks",
+        "Full-width feature showcases",
+        "Grid-based feature lists (3-column on desktop)"
+      ]
+    },
+
+    "contentBlocking": {
+      "style": "Card-based with subtle depth",
+      "imagePresentation": "Browser mockups, device frames, or floating cards",
+      "imageTreatment": "Screenshots in dark frames with subtle shadows",
+      "textImageRatio": "40/60 or 50/50 splits, generous whitespace between"
+    },
+
+    "heroPatterns": {
+      "type": "Full viewport height with background imagery",
+      "overlay": "Dark gradient overlay (50-80% opacity) over background",
+      "contentAlignment": "Center-aligned with stacked headline/subhead/CTA",
+      "scrollIndicator": "Optional downward arrow or scroll hint",
+      "heightRule": "100vh minimum, with padding top for navigation clearance"
+    }
+  },
+
+  "typographySystem": {
+    "hierarchyPattern": {
+      "philosophy": "Strong contrast between display and body text",
+      "displayFont": {
+        "usage": "Headlines, hero text, section titles",
+        "characteristics": "Serif or high-contrast sans-serif, large scale (48px-120px)",
+        "weight": "Regular to Medium (400-500), avoiding heavy weights",
+        "treatment": "Generous line-height (1.1-1.2), tight letter-spacing"
+      },
+      "bodyFont": {
+        "usage": "All paragraph text, UI elements, navigation",
+        "characteristics": "Clean sans-serif (Inter-like), highly legible",
+        "weight": "Normal (400) for body, Medium (500) for emphasis",
+        "treatment": "Comfortable line-height (1.5-1.6), normal spacing"
+      }
+    },
+
+    "scalePattern": {
+      "approach": "Modular scale with large jumps",
+      "ratio": "1.5x to 2x between hierarchy levels",
+      "mobileAdjustment": "Reduce display sizes by 30-40% on mobile"
+    },
+
+    "textTreatment": {
+      "paragraphs": {
+        "maxWidth": "600-700px for optimal readability",
+        "color": "Medium gray (#737373) for secondary text",
+        "spacing": "1.5-2em margin bottom between paragraphs"
+      },
+      "headlines": {
+        "color": "Pure black or very dark gray (#151515)",
+        "emphasis": "Partial word/phrase in different color or weight",
+        "alignment": "Left-aligned in content blocks, center in heroes"
+      },
+      "quotes": {
+        "style": "Large serif font, indented with attribution below",
+        "size": "1.5-2x body text size",
+        "color": "Primary dark color"
+      }
+    }
+  },
+
+  "colorStrategy": {
+    "paletteApproach": "Restrained, monochromatic base with strategic accent",
+
+    "colorUsageRules": {
+      "backgrounds": {
+        "primary": "Pure white or very light warm neutral",
+        "alternate": "Light beige/cream for section breaks",
+        "dark": "Very dark gray/navy, never pure black",
+        "pattern": "Alternate between white and light sections for rhythm"
+      },
+
+      "text": {
+        "primary": "Very dark gray (90-95% black) for main content",
+        "secondary": "Medium gray (45-50% opacity) for supporting text",
+        "inverted": "Pure white on dark backgrounds",
+        "links": "Accent blue, always underlined"
+      },
+
+      "accents": {
+        "usage": "Sparingly - CTAs, highlights, interactive elements only",
+        "philosophy": "One primary accent color (green/blue), used minimally",
+        "application": "Buttons, links, icons, hover states",
+        "avoidance": "Never use accent colors for large surface areas"
+      },
+
+      "imageOverlays": {
+        "pattern": "Dark gradients (black 40-60% opacity) over photos",
+        "purpose": "Ensure text readability over images",
+        "gradient": "Top-to-bottom or center-out darkening"
+      }
+    }
+  },
+
+  "spacingPhilosophy": {
+    "principle": "Generous whitespace as a premium signal",
+
+    "verticalRhythm": {
+      "sectionGaps": "120-160px between major sections (desktop)",
+      "contentGaps": "48-64px between content blocks within sections",
+      "elementGaps": "24-32px between related elements",
+      "mobileReduction": "Reduce by 40-50% on mobile viewports"
+    },
+
+    "horizontalSpacing": {
+      "containerPadding": "40-80px on desktop, 16-24px on mobile",
+      "contentMaxWidth": "1200px with auto margins for centering",
+      "textMaxWidth": "600-700px for paragraph content"
+    },
+
+    "componentSpacing": {
+      "cards": "24-32px internal padding",
+      "buttons": "12-16px horizontal, 8-12px vertical",
+      "navigation": "24-40px gaps between nav items"
+    }
+  },
+
+  "componentPatterns": {
+    "buttons": {
+      "style": "Minimal border-radius (0-2px), solid fills",
+      "sizes": "Generous padding, 40-48px height for primary CTAs",
+      "variants": [
+        "Primary: Dark background, white text, subtle hover state",
+        "Secondary: Transparent with border, inverts on hover",
+        "Text: Underlined link style, color change on hover"
+      ],
+      "typography": "Medium weight, 14-16px, uppercase optional"
+    },
+
+    "cards": {
+      "structure": "Light background with subtle shadow or border",
+      "elevation": "Minimal - flat or 1-2px shadow only",
+      "corners": "Sharp (1px) or barely rounded (2-4px)",
+      "content": "24-32px padding, clear visual hierarchy inside",
+      "hover": "Subtle scale (1.02x) or shadow increase"
+    },
+
+    "navigation": {
+      "style": "Transparent or white background, minimal design",
+      "height": "70-90px on desktop, 60-70px on mobile",
+      "logo": "Left-aligned, wordmark style, 60-80px wide",
+      "menu": "Right-aligned horizontal list, text-only links",
+      "sticky": "Fixed on scroll with background blur or solid fill",
+      "mobile": "Hamburger menu, full-screen overlay on open"
+    },
+
+    "imageContainers": {
+      "pattern": "Browser/device mockups showing product screenshots",
+      "treatment": "Dark frames (black/dark gray) with subtle shadows",
+      "shadow": "Large soft shadow (20-40px blur) for depth",
+      "placement": "Floating/offset from grid, overlapping sections slightly",
+      "aspectRatio": "16:9 or 4:3 for browser mockups"
+    },
+
+    "iconography": {
+      "style": "Minimalist line icons or simple geometric shapes",
+      "usage": "Sparingly - only for clear communication benefit",
+      "size": "24-32px, consistent sizing within sections",
+      "color": "Match text color or subtle accent"
+    }
+  },
+
+  "interactionPatterns": {
+    "hoverStates": {
+      "buttons": "Background color shift or opacity change (80-90%)",
+      "links": "Color change and/or opacity reduction",
+      "cards": "Subtle lift (2-4px) with shadow increase",
+      "images": "Slight scale (1.05x) or brightness adjustment"
+    },
+
+    "transitions": {
+      "duration": "200-300ms for most interactions",
+      "easing": "Ease-out for entrances, ease-in for exits",
+      "properties": "Transform, opacity, color - avoid animating heavy properties"
+    },
+
+    "scrollAnimations": {
+      "pattern": "Fade-in on scroll with subtle upward movement",
+      "trigger": "When element enters viewport (20-30% visible)",
+      "stagger": "Delay child elements by 50-100ms for cascade effect",
+      "usage": "On content blocks, cards, images - not on text"
+    },
+
+    "loadingStates": {
+      "style": "Skeleton screens or subtle fade-in",
+      "spinners": "Minimal, single-color, small size",
+      "progress": "Linear progress bar at top, not circular"
+    }
+  },
+
+  "responsiveStrategy": {
+    "approach": "Mobile-first with progressive enhancement",
+
+    "breakpointBehavior": {
+      "mobile": {
+        "layout": "Single column, full width",
+        "typography": "Reduce display sizes 30-40%, maintain readability",
+        "spacing": "Reduce vertical gaps by 40-50%",
+        "navigation": "Hamburger menu, full-screen overlay",
+        "images": "Full-width, stack below text content"
+      },
+
+      "tablet": {
+        "layout": "2-column grids, some asymmetry",
+        "typography": "Slight reduction from desktop (10-20%)",
+        "spacing": "Reduce gaps by 20-30%",
+        "navigation": "Horizontal with possible collapsed items"
+      },
+
+      "desktop": {
+        "layout": "Full grid system, asymmetric content-image pairs",
+        "typography": "Full size hierarchy",
+        "spacing": "Maximum generous spacing",
+        "navigation": "Full horizontal menu"
+      }
+    },
+
+    "imageHandling": {
+      "mobile": "Stack images below text, full-width",
+      "tablet": "Side-by-side 50/50 or 40/60 splits",
+      "desktop": "Asymmetric layouts, overlapping elements possible"
+    }
+  },
+
+  "contentPatterns": {
+    "sections": [
+      {
+        "type": "Hero",
+        "structure": "Full-screen background + centered overlay content",
+        "elements": ["H1 headline (48-120px)", "Subheadline (18-24px)", "Primary CTA", "Optional secondary CTA"],
+        "spacing": "Vertically centered or top-aligned with 20vh padding"
+      },
+      {
+        "type": "Feature Showcase",
+        "structure": "Alternating image-content blocks",
+        "pattern": "Image left / Content right, then flip for next section",
+        "elements": ["H2 headline", "Paragraph text (2-3 lines)", "Optional list or CTA", "Screenshot in frame"],
+        "spacing": "120px vertical between sections"
+      },
+      {
+        "type": "Stats/Social Proof",
+        "structure": "Centered content block",
+        "pattern": "Large number/stat + supporting text",
+        "elements": ["Eyebrow text (small caps/uppercase)", "Large headline", "Supporting paragraph"],
+        "spacing": "Centered with 80px+ vertical padding"
+      },
+      {
+        "type": "Feature Grid",
+        "structure": "3-column grid of icon + text cards",
+        "elements": ["Icon/graphic (32-48px)", "Headline (H3)", "Description (2-3 lines)"],
+        "spacing": "24-32px gap between cards"
+      },
+      {
+        "type": "Testimonial",
+        "structure": "Large quote block with attribution",
+        "elements": ["Quote text (serif, 24-32px)", "Attribution (name + company)", "Optional headshot"],
+        "spacing": "Centered, 100px+ vertical padding"
+      },
+      {
+        "type": "CTA Banner",
+        "structure": "Full-width colored section",
+        "elements": ["H2 headline", "Supporting text", "Primary button"],
+        "spacing": "60-80px vertical padding, centered content"
+      }
+    ]
+  },
+
+  "designSystemRules": {
+    "consistency": {
+      "rule1": "Maintain strict vertical rhythm using 8px base unit",
+      "rule2": "Use consistent corner radius throughout (0-2px)",
+      "rule3": "Limit to 2-3 font families maximum",
+      "rule4": "Use single accent color across all interactive elements",
+      "rule5": "Maintain consistent section padding across all pages"
+    },
+
+    "hierarchy": {
+      "rule1": "Only one H1 per page, used in hero section",
+      "rule2": "H2 for major section titles, H3 for sub-sections",
+      "rule3": "Body text never exceeds 700px width for readability",
+      "rule4": "Visual weight through size and color, not font weight",
+      "rule5": "White space creates separation more than borders"
+    },
+
+    "accessibility": {
+      "rule1": "Minimum 4.5:1 contrast ratio for all text",
+      "rule2": "All interactive elements minimum 44x44px touch target",
+      "rule3": "Focus states clearly visible with 2px outline",
+      "rule4": "Alt text for all images, empty alt for decorative",
+      "rule5": "Semantic HTML structure with proper heading hierarchy"
+    }
+  },
+
+  "implementationGuidelines": {
+    "cssApproach": {
+      "methodology": "CSS Custom Properties (variables) for all design tokens",
+      "organization": "Component-based with shared utilities",
+      "naming": "BEM or utility-first (Tailwind-compatible)",
+      "responsive": "Mobile-first media queries"
+    },
+
+    "assetGuidelines": {
+      "images": {
+        "format": "WebP with JPG/PNG fallback",
+        "optimization": "Compressed, multiple sizes for responsive",
+        "lazyLoading": "Native lazy loading for below-fold images",
+        "aspectRatio": "Maintain aspect ratios with CSS aspect-ratio property"
+      },
+      "fonts": {
+        "loading": "Font-display: swap for custom fonts",
+        "subsetting": "Subset fonts to used characters for performance",
+        "fallbacks": "Metric-compatible fallback fonts"
+      }
+    },
+
+    "performanceTargets": {
+      "firstContentfulPaint": "<1.5s",
+      "largestContentfulPaint": "<2.5s",
+      "cumulativeLayoutShift": "<0.1",
+      "totalBlockingTime": "<200ms"
+    }
+  },
+
+  "aiReplicationInstructions": {
+    "whenCreatingLayouts": [
+      "Start with full-screen hero with background image + dark overlay",
+      "Alternate between white and light beige backgrounds for sections",
+      "Use 120px vertical spacing between major sections on desktop",
+      "Create asymmetric content-image pairs (40/60 or 50/50 splits)",
+      "Center testimonials and stats sections",
+      "Use 3-column grid for feature lists on desktop, stack on mobile",
+      "Maintain max-width of 1200px for content containers"
+    ],
+
+    "whenStylingText": [
+      "Use large serif or high-contrast font for headlines (60-120px)",
+      "Use clean sans-serif for body text (16-18px)",
+      "Limit paragraph width to 600-700px",
+      "Use medium gray (#737373) for secondary text",
+      "Use very dark gray (#151515) for primary text, not pure black",
+      "Add generous line-height (1.5-1.6) for body text",
+      "Use tight line-height (1.1-1.2) for headlines"
+    ],
+
+    "whenChoosingColors": [
+      "Start with white, very light beige, and very dark gray",
+      "Add single accent color (blue or green) for CTAs only",
+      "Use color sparingly - mostly monochromatic palette",
+      "Apply 40-60% dark overlay on background images",
+      "Never use accent colors for large surface areas",
+      "Maintain high contrast (4.5:1 minimum) for readability"
+    ],
+
+    "whenAddingInteractivity": [
+      "Use subtle hover states - opacity change or slight color shift",
+      "Add 200-300ms transitions for smooth interactions",
+      "Implement scroll-triggered fade-in animations",
+      "Add subtle scale (1.02-1.05x) on card hover",
+      "Keep animations minimal and purposeful",
+      "Use ease-out timing for natural feel"
+    ],
+
+    "whenCreatingComponents": [
+      "Design buttons with minimal border-radius (0-2px)",
+      "Use dark background + white text for primary CTAs",
+      "Create cards with light background and subtle shadow",
+      "Frame screenshots in dark browser/device mockups",
+      "Keep icons minimal and line-based, 24-32px size",
+      "Make navigation transparent/minimal with text-only links"
+    ],
+
+    "whenOptimizingForMobile": [
+      "Stack all content in single column",
+      "Reduce headline sizes by 30-40%",
+      "Reduce vertical spacing by 40-50%",
+      "Use hamburger menu for navigation",
+      "Make images full-width",
+      "Maintain touch targets of 44x44px minimum",
+      "Test on actual mobile devices for real-world validation"
+    ]
+  },
+
+  "commonPitfallsToAvoid": [
+    "Don't use multiple accent colors - stick to one",
+    "Don't make border-radius too large - keep minimal",
+    "Don't use heavy font weights - prefer Regular or Medium",
+    "Don't crowd content - embrace white space",
+    "Don't use pure black (#000) - use very dark gray instead",
+    "Don't animate too many elements - be selective",
+    "Don't make paragraphs full-width - limit to 600-700px",
+    "Don't use decorative elements without purpose",
+    "Don't ignore mobile experience - design mobile-first",
+    "Don't sacrifice performance for visual effects"
+  ],
+
+  "keyDifferentiators": [
+    "Editorial-style typography with strong serif headlines",
+    "Extremely generous white space as premium signal",
+    "Restrained color palette with strategic accent usage",
+    "Product screenshots always in device/browser frames",
+    "Alternating section backgrounds for visual rhythm",
+    "Minimal UI chrome - almost invisible navigation and buttons",
+    "Data-driven messaging with clear value propositions",
+    "Professional photography with consistent dark overlays"
+  ]
+}

@@ -1,1 +1,174 @@
-/* Global styles - CSS loaded via link tags in layout.tsx */
+/* Rogo Design DNA - Global Styles - DARK MODE */
+
+/* CSS Custom Properties (Design Tokens) */
+:root {
+  /* Dark Mode Colors - AM Carcleaning Design DNA Palette */
+  --color-bg-primary: #151515;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-tertiary: #1f1f1f;
+  --color-card-bg: #1f1f1f;
+  --color-card-bg-hover: #252525;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #808080;
+
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-accent-gold: #bc9600;
+  --color-accent-gold-dark: #a08500;
+
+  /* Typography */
+  --font-primary: 'Ubuntu', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Barlow', serif;
+
+  /* Spacing - Design DNA */
+  --spacing-unit: 8px;
+  --container-max-width: 1200px;
+  --section-padding-desktop: 120px;
+  --section-padding-mobile: 64px;
+
+  /* Effects - Dark Mode */
+  --transition-speed: 200ms;
+  --border-radius: 2px;
+  --shadow-subtle: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Design DNA: Base Typography - Dark Mode */
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Design DNA: Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Design DNA: Selection Color */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Responsive Design DNA Rules */
+
+/* Mobile: max 809.98px - Design DNA: Single column, reduced spacing */
+@media (max-width: 809.98px) {
+  .rogo-section {
+    padding-top: var(--section-padding-mobile) !important;
+    padding-bottom: var(--section-padding-mobile) !important;
+  }
+
+  .rogo-feature-block {
+    margin-bottom: 64px !important;
+  }
+
+  .rogo-feature-block .col-lg-6 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Design DNA: Stack images below text on mobile */
+  .rogo-feature-block .order-lg-2 {
+    order: 2 !important;
+  }
+
+  .rogo-feature-block .order-lg-1 {
+    order: 1 !important;
+  }
+
+  /* Design DNA: Reduce headline sizes by 30-40% on mobile */
+  .rogo-hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+  }
+
+  .rogo-section-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+  }
+}
+
+/* Tablet: 810px - 1199.98px - Design DNA: Reduce gaps by 20-30% */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .rogo-section {
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+  }
+
+  .rogo-feature-block {
+    margin-bottom: 96px !important;
+  }
+}
+
+/* Design DNA: Accessibility - Focus States */
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+/* Design DNA: Smooth Transitions on Interactive Elements */
+a,
+button {
+  transition: all var(--transition-speed) ease;
+}
+
+/* Design DNA: Image Loading - Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Dark Mode: Form Labels */
+.form-floating > label {
+  color: #b0b0b0 !important;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: #ffffff !important;
+}
+
+/* Dark Mode: Form Controls */
+.form-control:focus {
+  border-color: rgba(188, 150, 0, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(188, 150, 0, 0.1) !important;
+}
+
+/* Design DNA: Container Max Width */
+.rogo-container {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 809.98px) {
+  .rogo-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Design DNA: Button Hover States - Prevent Bootstrap Override */
+.btn:hover {
+  opacity: 1 !important;
+}
+
+/* Design DNA: Remove Bootstrap Button Shadows */
+.btn:focus,
+.btn:active {
+  box-shadow: none !important;
+}
