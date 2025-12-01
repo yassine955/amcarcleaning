@@ -87,7 +87,7 @@ export default function InterieurPage() {
               <div className="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
                 <img
                   className="position-absolute img-fluid w-100 h-100"
-                  src="/fotos-zaak/WhatsApp Image 2025-10-29 at 12.18.10.jpeg"
+                  src="/fotos-zaak/WhatsApp Image 2025-12-01 at 20.59.00.jpeg"
                   style={{objectFit: 'cover', borderRadius: '2px'}}
                   alt="Interieur reiniging"
                 />

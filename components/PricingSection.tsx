@@ -38,6 +38,10 @@ export default function PricingSection() {
                 <i className="fa fa-info-circle me-2" style={{ color: '#bc9600' }}></i>
                 Alle prijzen zijn exclusief 21% BTW
               </p>
+              <p className="mb-4 text-center" style={{ color: 'rgb(176, 176, 176)', fontSize: '0.9375rem' }}>
+                <i className="fa fa-car me-2" style={{ color: 'rgb(188, 150, 0)' }}></i>
+                Autogarage's & autohandelaren kunnen telefonisch contact met ons opnemen, aangezien voor hen speciale tarieven gelden.
+              </p>
 
               {/* Combined Services List */}
               <div className="mb-3 d-flex justify-content-between align-items-start pb-2" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', gap: '16px' }}>
@@ -90,7 +94,7 @@ export default function PricingSection() {
 
               <div className="mt-4 pt-4 text-center" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
 
-                <a href="/contact" className="btn" style={{
+                <a href="tel:0624680451" className="btn" style={{
                   fontSize: '1rem',
                   fontWeight: 600,
                   fontFamily: "'Roboto Condensed', sans-serif",
@@ -105,7 +109,7 @@ export default function PricingSection() {
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px'
                 }}>
-                  <i className="fa fa-calculator me-2"></i>Offerte Aanvragen
+                  <i className="fa fa-phone me-2"></i>Bel Direct: 06 246 804 51
                 </a>
               </div>
             </div>
