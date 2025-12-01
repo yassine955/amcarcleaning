@@ -14,7 +14,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 0 }}>
           <img
-            src="/img/IMG_7278.jpg"
+            src="/fotos-zaak/WhatsApp Image 2025-12-01 at 17.44.14.jpeg"
             alt="Autopoetsbedrijf"
             className="w-100 h-100"
             style={{ objectFit: 'cover' }}

@@ -2,8 +2,8 @@
 
 // Prijzen (excl BTW)
 const prices = {
-  personenautoCompleet: 250,
-  bedrijfswagenCompleet: 300,
+  personenautoCompleet: 200,
+  bedrijfswagenCompleet: 270,
   personenautoInterieur: 150,
   bedrijfswagenInterieur: 200
 }
@@ -56,6 +56,16 @@ export default function PricingSection() {
                 <span style={{ color: '#b0b0b0', flex: 1 }}>Bedrijfswagens enkel interieur</span>
                 <strong style={{ color: '#ffffff', flexShrink: 0, textAlign: 'right', whiteSpace: 'nowrap' }}>vanaf {formatPrice(prices.bedrijfswagenInterieur)}</strong>
               </div>
+              <div className="mb-3 pb-2" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                <div className="d-flex justify-content-between align-items-start" style={{ gap: '16px' }}>
+                  <span style={{ color: 'rgb(176, 176, 176)', flex: 1 }}>Glas & Keramische coating op uw auto</span>
+                  <strong style={{ color: 'rgb(255, 255, 255)', flexShrink: 0, textAlign: 'right', whiteSpace: 'nowrap' }}>vanaf €800</strong>
+                </div>
+                <p className="mb-0 mt-2" style={{ color: 'rgb(176, 176, 176)', fontSize: '0.675rem' }}>
+                  <i className="fa fa-shield-alt me-2" style={{ color: 'rgb(188, 150, 0)' }}></i>
+                  De coating blijft minimaal 4 jaar op uw auto, tevens bieden wij 4 jaar garantie
+                </p>
+              </div>
               <div className="d-flex justify-content-between align-items-start mb-3 pb-2" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', gap: '16px' }}>
                 <span style={{ color: '#b0b0b0', flex: 1 }}>Bankstel reiniging op afspraak</span>
                 <strong style={{ color: '#ffffff', flexShrink: 0, textAlign: 'right', whiteSpace: 'nowrap' }}>neem contact op</strong>
@@ -68,9 +78,13 @@ export default function PricingSection() {
                   <strong style={{ color: '#ffffff' }}>Belettering verwijderen:</strong> Voor zowel personenauto's als bedrijfswagens.
                   Prijs verschilt per hoeveelheid werk en wordt mondeling afgestemd.
                 </p>
-                <p className="mb-0" style={{ color: '#b0b0b0' }}>
+                <p className="mb-2" style={{ color: '#b0b0b0' }}>
                   <i className="fa fa-truck me-2" style={{ color: '#bc9600' }}></i>
                   <strong style={{ color: '#ffffff' }}>Ophaal & brengservice:</strong> Wij bieden ophaal & brengservice aan voor klanten in Woerden.
+                </p>
+                <p className="mb-0" style={{ color: '#b0b0b0' }}>
+                  <i className="fa fa-building me-2" style={{ color: '#bc9600' }}></i>
+                  <strong style={{ color: '#ffffff' }}>Voor bedrijven:</strong> Eventueel op locatie mogelijk.
                 </p>
               </div>
 
